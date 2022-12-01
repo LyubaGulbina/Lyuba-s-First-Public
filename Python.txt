@@ -1,0 +1,106 @@
+print ("Hello, world!")
+
+hello = "Hello, world!"
+print (hello)
+
+print (2+2)
+print (15-2)
+print (3*7)
+print (7/2)
+print (2**8)
+
+print(17/2) #обычное деление - результат 8.5
+print(17//2) #целочисленное деление - результат 8, целая часть при делении
+print(17%2) #деление с остатком - результат 1, остаток при делении
+
+возведение в степень:
+print(3**6)
+print(10**(-1))
+print(25**(1/2))
+
+s1 = "hello"
+s2 = 'hello'
+s3 = """hello"""
+
+print (s1)
+print (s2)
+print (s3)
+
+greeting = "Hello" + "," + " world"
+print (greeting)
+
+l = len (greeting)
+print (l)
+
+print (len (s1))
+
+strings = ["Hello", "world"]
+numbers = [1,2,3,4,5]
+data = ["hello", 1]
+
+print (strings)
+
+sum = numbers + data
+print (sum)
+
+numbers.append(6)
+print (numbers)
+
+first = strings[0]
+second = strings[1]
+print (first)
+print(second)
+
+#cat: кошка
+#bat: летучая мышь
+#ключ: значение
+
+dictionary = {
+  "cat": "кошка",
+  "bat": "летучая мышь"
+}
+print (dictionary)
+}
+# print (dictionary)
+# cat = dictionary ["cat"]
+# print (cat)
+
+countries = {
+  "Африка": ["Египет", "Конго", "ЮАР"],
+  "Азия": ["Китай", "Тайланд", "Индонезия"]
+}
+
+Africa = countries ["Африка"]
+print (Africa)
+
+Africa_key =("Африка")
+print (countries[Africa_key])
+
+countries ["Европа"] = ["Австрия","Венгрия","Словения"]
+print (countries)
+
+countries ["Европа"] = ["Австрия","Венгрия","Словения"]
+print (countries)
+Africa.append("Эфиопия")
+print (Africa)
+print (countries)
+
+print(type(5))
+print(type(5.8))
+В первом случае будет выведен результат <class 'int'>, а во втором - <class 'float'>. Целые числа принадлежат классу int,  дробные - классу float. 
+****
+import telebot
+
+token = ''
+
+bot = telebot.TeleBot(token)
+
+
+@bot.message_handler(content_types=["text"])
+def echo(message):
+    bot.send_message(message.chat.id, message.text)
+
+
+bot.polling(none_stop=True)
+****
+
